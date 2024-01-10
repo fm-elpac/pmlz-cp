@@ -19,4 +19,8 @@ jobs:
     # server/
     - run: cd server && deno task build
 
+    # ui-vue/
+    - run: cd ui-vue && npm install
+    - run: cd ui-vue && npm run build
+
     # TODO
