@@ -1,0 +1,17 @@
+[Unit]
+Description=pmlz-cp web ui (electronjs, cage)
+
+[Service]
+ExecStart=deno ${HOME}/pmlz-cp/server/main.js
+
+# 实际运行模式 (否则为开发模式)
+Environment=PMLZ_CP=1
+# 启动图形界面 (web) 执行的命令
+Environment="PMLZ_CP_UI_CMD=cage -srrr electron /home/orangepi/pmlz-cp/main.js"
+# 后端监听端口: http://127.0.0.1:20100/
+Environment=PMLZ_CP_PORT=20100
+# /cp_api/ 访问口令存储文件: /run/user/1000/pmlz-cp/token
+Environment=PMLZ_CP_TOKEN=${XDG_RUNTIME_DIR}/pmlz-cp/token
+
+[Install]
+WantedBy=default.target
