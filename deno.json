@@ -1,5 +1,5 @@
 {
   "fmt": {
-    "exclude": []
+    "exclude": ["**/_fresh/*"]
   }
 }

@@ -16,4 +16,7 @@ jobs:
 
     - run: deno fmt --check
 
+    # server/
+    - run: cd server && deno task build
+
     # TODO
