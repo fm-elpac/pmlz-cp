@@ -1,18 +1,20 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView } from 'vue-router';
+import c上半 from "./c/框架/上半.vue";
 </script>
 
 <template>
-  <header>
-    h
-  </header>
+  <c上半 class="b-半" />
 
-  <RouterView />
+  <div class="b-半">
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.b-半 {
+  height: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 </style>
