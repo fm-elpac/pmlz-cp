@@ -1,0 +1,11 @@
+# electron
+
+提供浏览器运行环境.
+
+- 开发运行:
+
+  ```sh
+  electron main.js
+  ```
+
+TODO

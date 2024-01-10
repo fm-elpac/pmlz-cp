@@ -13,6 +13,7 @@ export default function getConfig() {
 
       onListen: (p: { hostname: string; port: number }) => {
         // TODO
+        console.log("pmlz-cp deno/fresh: listen");
         console.log(p);
       },
     },
