@@ -13,4 +13,34 @@ export async function 读口令() {
   return await ea.read_token();
 }
 
-// TODO
+export async function getAppMetrics() {
+  return await ea.getAppMetrics();
+}
+
+export async function getGPUFeatureStatus() {
+  return await ea.getGPUFeatureStatus();
+}
+
+export async function getGPUInfo() {
+  return await ea.getGPUInfo();
+}
+
+export async function os_cpus() {
+  return await ea.os_cpus();
+}
+
+export async function os_loadavg() {
+  return await ea.os_loadavg();
+}
+
+export async function os_uptime() {
+  return await ea.os_uptime();
+}
+
+export async function os_memory() {
+  return await ea.os_memory();
+}
+
+export async function os_networkInterfaces() {
+  return await ea.os_networkInterfaces();
+}

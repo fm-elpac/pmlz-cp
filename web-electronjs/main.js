@@ -1,9 +1,17 @@
 // pmlz-cp electronjs
 const path = require("node:path");
+const { readFile } = require("node:fs/promises");
+const os = require("node:os");
 const { app, BrowserWindow, ipcMain } = require("electron");
 
+const LOGP = "pmlz-cp electronjs";
+
+function logi(t) {
+  console.log(LOGP + t);
+}
+
 // DEBUG
-console.log("pmlz-cp electronjs: main.js");
+logi(": main.js");
 
 const 开发地址 = "http://localhost:5173"; // vue `npm run dev`
 
@@ -30,13 +38,59 @@ function 初始化接口() {
 
   // 读取 deno/fresh server http token
   async function read_token() {
-    // TODO
+    const 口令文件 = process.env["PMLZ_CP_TOKEN"];
+    logi(" read token: " + 口令文件);
+
+    return await readFile(口令文件, { encoding: "utf8" });
   }
 
-  // TODO
+  async function getAppMetrics() {
+    return app.getAppMetrics();
+  }
+
+  async function getGPUFeatureStatus() {
+    return app.getGPUFeatureStatus();
+  }
+
+  async function getGPUInfo() {
+    return await app.getGPUInfo("complete");
+  }
+
+  async function os_cpus() {
+    return os.cpus();
+  }
+
+  async function os_loadavg() {
+    return os.loadavg();
+  }
+
+  async function os_uptime() {
+    return os.uptime();
+  }
+
+  // 获取系统内存信息
+  async function os_memory() {
+    return {
+      free: os.freemem(),
+      total: os.totalmem(),
+    };
+  }
+
+  async function os_networkInterfaces() {
+    return os.networkInterfaces();
+  }
 
   ipcMain.handle("ea:electron_version", electron_version);
   ipcMain.handle("ea:read_token", read_token);
+
+  ipcMain.handle("ea:getAppMetrics", getAppMetrics);
+  ipcMain.handle("ea:getGPUFeatureStatus", getGPUFeatureStatus);
+  ipcMain.handle("ea:getGPUInfo", getGPUInfo);
+  ipcMain.handle("ea:os_cpus", os_cpus);
+  ipcMain.handle("ea:os_loadavg", os_loadavg);
+  ipcMain.handle("ea:os_uptime", os_uptime);
+  ipcMain.handle("ea:os_memory", os_memory);
+  ipcMain.handle("ea:os_networkInterfaces", os_networkInterfaces);
 }
 
 function 初始化隐藏鼠标指针(w) {
@@ -47,14 +101,14 @@ function 初始化隐藏鼠标指针(w) {
   async function 隐藏鼠标指针() {
     css_key = await w.webContents.insertCSS(CSS);
 
-    console.log("pmlz-cp electronjs: cursor hide");
+    logi(": cursor hide");
     隐藏 = true;
   }
 
   async function 显示鼠标指针() {
     await w.webContents.removeInsertedCSS(css_key);
 
-    console.log("pmlz-cp electronjs: cursor show");
+    logi(": cursor show");
     隐藏 = false;
   }
 
@@ -99,7 +153,7 @@ function 创建窗口() {
 
   const url = 获取加载地址();
 
-  console.log("pmlz-cp electronjs: " + url);
+  logi(" URL: " + url);
   w.loadURL(url);
 }
 
