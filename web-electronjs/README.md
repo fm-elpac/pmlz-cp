@@ -8,4 +8,8 @@
   electron main.js
   ```
 
+## 键盘快捷键
+
+- `F1` 切换隐藏/显示鼠标指针
+
 TODO
