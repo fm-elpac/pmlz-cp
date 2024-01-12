@@ -22,13 +22,13 @@ const 激活 = computed(() => {
 </script>
 
 <template>
-  <div class="b-导航栏按钮" :class="{ 激活 }" @click="点击">
+  <div class="c-导航栏按钮" :class="{ 激活 }" @click="点击">
     <span>{{ p.文本 }}</span>
   </div>
 </template>
 
 <style scoped>
-.b-导航栏按钮 {
+.c-导航栏按钮 {
   padding: 1em 3em;
 
   cursor: pointer;
@@ -38,7 +38,7 @@ const 激活 = computed(() => {
   left: 0;
 }
 
-.b-导航栏按钮::after {
+.c-导航栏按钮::after {
   content: " ";
   display: block;
   width: 100%;
@@ -53,14 +53,14 @@ span {
   color: var(--c-文字2);
 }
 
-.b-导航栏按钮:hover span,
-.b-导航栏按钮.激活 span {
+.c-导航栏按钮:hover span,
+.c-导航栏按钮.激活 span {
   color: var(--c-标题);
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }
 
-.b-导航栏按钮:hover::after,
-.b-导航栏按钮.激活::after {
+.c-导航栏按钮:hover::after,
+.c-导航栏按钮.激活::after {
   background-color: var(--c-标题);
   box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }

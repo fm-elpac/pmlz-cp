@@ -3,8 +3,8 @@ import c导航栏按钮 from "./导航栏按钮.vue";
 </script>
 
 <template>
-  <div class="b-导航栏">
-    <div class="r">
+  <div class="c-导航栏">
+    <div class="行">
       <c导航栏按钮 文本="首页" 路径="/" />
       <c导航栏按钮 文本="功能" 路径="/功能" />
       <c导航栏按钮 文本="设置" 路径="/设置" />
@@ -14,13 +14,13 @@ import c导航栏按钮 from "./导航栏按钮.vue";
 </template>
 
 <style scoped>
-.b-导航栏 {
+.c-导航栏 {
   border-bottom: solid 0.2em var(--c-边框);
 
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.r {
+.行 {
   display: flex;
 }
 </style>

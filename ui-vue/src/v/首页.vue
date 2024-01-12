@@ -2,13 +2,13 @@
 </script>
 
 <template>
-  <div class="p">
+  <div class="v-首页">
     (首页)
   </div>
 </template>
 
 <style scoped>
-.p {
+.v-首页 {
   padding: 1em;
 }
 </style>

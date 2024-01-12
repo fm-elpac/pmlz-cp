@@ -1,47 +1,38 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue";
+import { computed } from "vue";
 import { 格式化时分秒, 格式化星期 } from "@/util/时间.js";
+import { useInterval1s } from "@/hook/定时器.js";
 
 // 当前时间
-const d = ref(new Date());
+const d = useInterval1s();
 
 // 时:分:秒
 const t = computed(() => 格式化时分秒(d.value));
 // 星期
 const 星期 = computed(() => 格式化星期(d.value));
-
-// 更新时间
-let 定时器;
-onMounted(() => {
-  定时器 = setInterval(() => {
-    d.value = new Date();
-  }, 1e3);
-});
-// 清理
-onUnmounted(() => clearInterval(定时器));
 </script>
 
 <template>
-  <div class="b-大时钟">
-    <div class="r1">
+  <div class="c-大时钟">
+    <div class="行1">
       <span class="时">{{ t[0] }}</span>
       <span class="d1">:</span>
       <span class="分">{{ t[1] }}</span>
       <span class="d2">:</span>
       <span class="秒">{{ t[2] }}</span>
     </div>
-    <div class="r2">
+    <div class="行2">
       <span class="星期">星期{{ 星期 }}</span>
     </div>
   </div>
 </template>
 
 <style scoped>
-.b-大时钟 {
+.c-大时钟 {
   padding: 4em 0;
 }
 
-.r1 {
+.行1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -72,7 +63,7 @@ onUnmounted(() => clearInterval(定时器));
   opacity: 0.8;
 }
 
-.r2 {
+.行2 {
   display: flex;
   justify-content: center;
 }

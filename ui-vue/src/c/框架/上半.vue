@@ -6,9 +6,9 @@ import c大时钟 from "../上半/大时钟.vue";
 </script>
 
 <template>
-  <div class="b-上半">
+  <div class="c-上半">
     <c顶栏 />
-    <div class="c-上半">
+    <div class="中心区域">
       <c大时钟 />
     </div>
     <c导航栏 />
@@ -16,12 +16,12 @@ import c大时钟 from "../上半/大时钟.vue";
 </template>
 
 <style scoped>
-.b-上半 {
+.c-上半 {
   display: flex;
   flex-direction: column;
 }
 
-.c-上半 {
+.中心区域 {
   flex-grow: 1;
   flex-shrink: 1;
 }

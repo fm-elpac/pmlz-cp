@@ -1,5 +1,5 @@
 {
   "fmt": {
-    "exclude": ["**/_fresh/*", "**/dist/*"]
+    "exclude": ["**/_fresh/*", "**/dist/*", "server/static/assets/*"]
   }
 }

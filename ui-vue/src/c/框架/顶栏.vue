@@ -3,14 +3,14 @@ import c顶栏时间 from "./顶栏时间.vue";
 </script>
 
 <template>
-  <div class="b-顶栏">
+  <div class="c-顶栏">
     <h1>胖喵小窝中控台</h1>
     <c顶栏时间 />
   </div>
 </template>
 
 <style scoped>
-.b-顶栏 {
+.c-顶栏 {
   display: flex;
   align-items: center;
 

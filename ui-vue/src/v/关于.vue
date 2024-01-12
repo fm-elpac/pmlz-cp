@@ -2,13 +2,13 @@
 </script>
 
 <template>
-  <div class="p">
+  <div class="v-关于">
     (关于)
   </div>
 </template>
 
 <style scoped>
-.p {
+.v-关于 {
   padding: 1em;
 }
 </style>

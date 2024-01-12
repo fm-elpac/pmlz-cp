@@ -2,13 +2,13 @@
 </script>
 
 <template>
-  <div class="p">
+  <div class="v-功能">
     (功能)
   </div>
 </template>
 
 <style scoped>
-.p {
+.v-功能 {
   padding: 1em;
 }
 </style>
