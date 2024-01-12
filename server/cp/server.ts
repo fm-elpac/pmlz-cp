@@ -8,7 +8,7 @@ import {
 } from "./conf.ts";
 import { logi } from "./log.ts";
 import { 初始化口令, 口令文件路径 } from "./token.ts";
-import { 初始化数据库 } from "./db.ts";
+import { 初始化数据库 } from "./db/kv.ts";
 
 // 获取 http 服务器监听的端口号
 export function 获取端口(): number {

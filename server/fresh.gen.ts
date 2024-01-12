@@ -5,6 +5,8 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $cp_api_middleware from "./routes/cp_api/_middleware.ts";
+import * as $cp_api_conf_get from "./routes/cp_api/conf_get.ts";
+import * as $cp_api_conf_set from "./routes/cp_api/conf_set.ts";
 import * as $cp_api_version from "./routes/cp_api/version.ts";
 import * as $index from "./routes/index.ts";
 import * as $version from "./routes/version.ts";
@@ -16,6 +18,8 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/cp_api/_middleware.ts": $cp_api_middleware,
+    "./routes/cp_api/conf_get.ts": $cp_api_conf_get,
+    "./routes/cp_api/conf_set.ts": $cp_api_conf_set,
     "./routes/cp_api/version.ts": $cp_api_version,
     "./routes/index.ts": $index,
     "./routes/version.ts": $version,

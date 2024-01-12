@@ -11,3 +11,12 @@ export async function 建目录(p: string) {
 export async function 建上级目录(p: string) {
   await 建目录(dirname(p));
 }
+
+// 返回 json 响应
+export function res_json(数据) {
+  return new Response(JSON.stringify(数据), {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+}
