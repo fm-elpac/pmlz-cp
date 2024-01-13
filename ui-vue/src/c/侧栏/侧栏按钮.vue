@@ -22,30 +22,31 @@ const 激活 = computed(() => {
 </script>
 
 <template>
-  <div class="c-导航栏按钮" :class="{ 激活 }" @click="点击">
+  <div class="c-侧栏按钮" :class="{ 激活 }" @click="点击">
     <span>{{ p.文本 }}</span>
   </div>
 </template>
 
 <style scoped>
-.c-导航栏按钮 {
-  padding: 1em 3em;
+.c-侧栏按钮 {
+  padding: 1em 2em 1em 1em;
+  text-align: right;
 
   cursor: pointer;
 
   position: relative;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
-.c-导航栏按钮::after {
+.c-侧栏按钮::after {
   content: "";
   display: block;
-  width: 100%;
-  height: 0.2em;
+  height: 100%;
+  width: 0.2em;
   position: absolute;
-  left: 0;
-  bottom: -0.2em;
+  top: 0;
+  right: -0.2em;
 }
 
 span {
@@ -53,19 +54,19 @@ span {
   color: var(--c-文字2);
 }
 
-.c-导航栏按钮:hover,
-.c-导航栏按钮.激活 {
+.c-侧栏按钮:hover,
+.c-侧栏按钮.激活 {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.c-导航栏按钮:hover span,
-.c-导航栏按钮.激活 span {
+.c-侧栏按钮:hover span,
+.c-侧栏按钮.激活 span {
   color: var(--c-标题);
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }
 
-.c-导航栏按钮:hover::after,
-.c-导航栏按钮.激活::after {
+.c-侧栏按钮:hover::after,
+.c-侧栏按钮.激活::after {
   background-color: var(--c-标题);
   box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }

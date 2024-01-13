@@ -2,13 +2,15 @@
 </script>
 
 <template>
-  <div class="v-调试">
-    (调试)
+  <div class="c-下半简单">
+    <slot />
   </div>
 </template>
 
 <style scoped>
-.v-调试 {
+.c-下半简单 {
   padding: 1em;
+  height: 100%;
+  overflow-y: auto;
 }
 </style>

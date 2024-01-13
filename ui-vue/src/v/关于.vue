@@ -2,22 +2,23 @@
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { P_VER } from "../conf.js";
+import { 格式化json } from "@/util/json.js";
 import { electron版本 } from "@/api/ea/mod.js";
+import c下半简单 from "@/c/框架/下半简单.vue";
 import c代码块 from "@/c/简单/代码块.vue";
 import c块按钮 from "@/c/简单/块按钮.vue";
 
 const electronjs版本 = ref("");
 
 onMounted(async () => {
-  const 版本 = await electron版本();
-  electronjs版本.value = JSON.stringify(版本, "", "  ");
+  electronjs版本.value = 格式化json(await electron版本());
 });
 
 const router = useRouter();
 
 function 调试() {
   router.push({
-    path: "/debug",
+    path: "/debug/sys",
   });
 }
 
@@ -41,7 +42,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 </script>
 
 <template>
-  <div class="v-关于">
+  <c下半简单 class="v-关于">
     <div class="关于信息">
       <h2>pmlz-cp</h2>
       <p>版本 {{ P_VER }}</p>
@@ -54,16 +55,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <c代码块 :文本="license" />
     </div>
     <c块按钮 文本="进入调试界面" @点击="调试" />
-  </div>
+  </c下半简单>
 </template>
 
 <style scoped>
-.v-关于 {
-  padding: 1em;
-  height: 100%;
-  overflow-y: auto;
-}
-
 .关于信息 {
   margin-bottom: 2em;
 }
