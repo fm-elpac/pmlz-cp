@@ -1,6 +1,11 @@
 <script setup>
+import { ref } from "vue";
 import { RouterView } from "vue-router";
+import { useKbScroll } from "@/kb/mod.js";
 import c侧栏 from "../侧栏/侧栏.vue";
+
+const e = ref(null);
+useKbScroll(e);
 </script>
 
 <template>
@@ -10,7 +15,7 @@ import c侧栏 from "../侧栏/侧栏.vue";
         <slot />
       </c侧栏>
     </div>
-    <div class="右">
+    <div ref="e" class="右">
       <RouterView />
     </div>
   </div>

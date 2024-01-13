@@ -1,6 +1,9 @@
 <script setup>
+import { useKb } from "@/kb/mod.js";
+
 const p = defineProps({
   文本: String,
+  按键: String,
 });
 
 const emit = defineEmits(["点击"]);
@@ -8,12 +11,14 @@ const emit = defineEmits(["点击"]);
 function 点击() {
   emit("点击");
 }
+
+const { 按键帮助文本 } = useKb(p.按键, 点击);
 </script>
 
 <template>
   <div class="c-块按钮">
     <button type="button" @click="点击">
-      <span>{{ p.文本 }}</span>
+      <span>{{ p.文本 }}{{ 按键帮助文本 }}</span>
     </button>
   </div>
 </template>

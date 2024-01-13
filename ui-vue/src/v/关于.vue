@@ -54,7 +54,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <h3>LICENSE</h3>
       <c代码块 :文本="license" />
     </div>
-    <c块按钮 文本="进入调试界面" @点击="调试" />
+    <c块按钮 文本="进入调试界面" 按键="d" @点击="调试" />
   </c下半简单>
 </template>
 

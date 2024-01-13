@@ -1,8 +1,13 @@
 <script setup>
+import { ref } from "vue";
+import { useKbScroll } from "@/kb/mod.js";
+
+const e = ref(null);
+useKbScroll(e);
 </script>
 
 <template>
-  <div class="c-下半简单">
+  <div ref="e" class="c-下半简单">
     <slot />
   </div>
 </template>

@@ -127,7 +127,11 @@ function 初始化隐藏鼠标指针(w) {
   // 按 F1 键切换隐藏/显示鼠标指针
   w.webContents.on("before-input-event", async (event, input) => {
     if (input.type == "keyUp") {
-      if (input.key == "F1") {
+      // 不能同时按下 Shift, Ctrl, Alt, Meta 键
+      if (
+        (input.key == "F1") && (!input.shift) && (!input.control) &&
+        (!input.alt) && (!input.meta)
+      ) {
         await 切换显示();
       }
     }

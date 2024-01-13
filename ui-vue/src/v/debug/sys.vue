@@ -55,8 +55,8 @@ onMounted(async () => {
 
 <template>
   <div class="v-debug-sys">
-    <p>运行时间: {{ uptime }}</p>
-    <p>内存: {{ memory }}</p>
+    <p>运行时长: {{ uptime }}</p>
+    <p>内存占用: {{ memory }}</p>
     <p>平均负载: {{ loadavg }}</p>
 
     <p class="t">IP 地址:</p>

@@ -1,10 +1,12 @@
 <script setup>
 import { computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import { useKb } from "@/kb/mod.js";
 
 const p = defineProps({
   文本: String,
   路径: String,
+  按键: String,
 });
 
 const router = useRouter();
@@ -19,11 +21,13 @@ function 点击() {
 const 激活 = computed(() => {
   return route.path == p.路径;
 });
+
+const { 按键帮助文本 } = useKb(p.按键, 点击);
 </script>
 
 <template>
   <div class="c-侧栏按钮" :class="{ 激活 }" @click="点击">
-    <span>{{ p.文本 }}</span>
+    <span>{{ p.文本 }}{{ 按键帮助文本 }}</span>
   </div>
 </template>
 
