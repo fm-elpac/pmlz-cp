@@ -31,6 +31,7 @@ button {
   border: solid 0.2em var(--c-边框);
   border-radius: 0.4em;
   text-align: center;
+  cursor: pointer;
 }
 
 button:hover, button:active {

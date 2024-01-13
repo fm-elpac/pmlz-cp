@@ -53,6 +53,11 @@ span {
   color: var(--c-文字2);
 }
 
+.c-导航栏按钮:hover,
+.c-导航栏按钮.激活 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .c-导航栏按钮:hover span,
 .c-导航栏按钮.激活 span {
   color: var(--c-标题);
