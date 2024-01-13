@@ -2,6 +2,7 @@ import { Handlers } from "$fresh/server.ts";
 import { res_json } from "../../cp/util.ts";
 import { conf_set } from "../../cp/db/conf.ts";
 
+// POST /cp_api/conf_set
 export const handler: Handlers = {
   async POST(req, _ctx) {
     const 参数 = await req.json();

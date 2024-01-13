@@ -7,6 +7,7 @@ interface 状态 {
   // TODO
 }
 
+// /cp_api/* header: x-token
 export async function handler(
   req: Request,
   ctx: FreshContext<状态>,

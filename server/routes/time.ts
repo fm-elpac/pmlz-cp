@@ -1,7 +1,7 @@
 import { FreshContext } from "$fresh/server.ts";
-import { P_VERSION } from "../cp/conf.ts";
 
-// GET /version
+// GET /time
 export const handler = (_req: Request, _ctx: FreshContext): Response => {
-  return new Response(P_VERSION);
+  const 时间 = new Date().toISOString();
+  return new Response(时间);
 };

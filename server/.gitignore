@@ -11,5 +11,8 @@ _fresh/
 node_modules/
 
 # vue dist
-static/index.html
-static/assets/
+static/
+!static/favicon.ico
+!static/logo.svg
+!static/styles.css
+

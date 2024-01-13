@@ -9,6 +9,7 @@ import * as $cp_api_conf_get from "./routes/cp_api/conf_get.ts";
 import * as $cp_api_conf_set from "./routes/cp_api/conf_set.ts";
 import * as $cp_api_version from "./routes/cp_api/version.ts";
 import * as $index from "./routes/index.ts";
+import * as $time from "./routes/time.ts";
 import * as $version from "./routes/version.ts";
 
 import { type Manifest } from "$fresh/server.ts";
@@ -22,6 +23,7 @@ const manifest = {
     "./routes/cp_api/conf_set.ts": $cp_api_conf_set,
     "./routes/cp_api/version.ts": $cp_api_version,
     "./routes/index.ts": $index,
+    "./routes/time.ts": $time,
     "./routes/version.ts": $version,
   },
   islands: {},

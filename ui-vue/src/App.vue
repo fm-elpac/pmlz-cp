@@ -1,12 +1,15 @@
 <script setup>
 import { onMounted } from "vue";
 import { RouterView } from "vue-router";
+import { 播放启动声音 } from "./util/声音.js";
 import { cp_version } from "./api/da/mod.js";
 import c上半 from "./c/框架/上半.vue";
 
 onMounted(async () => {
   // 初始化接口
   console.log(await cp_version());
+
+  播放启动声音();
 });
 </script>
 
