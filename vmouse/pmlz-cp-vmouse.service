@@ -1,0 +1,8 @@
+[Unit]
+Description=Virtual mouse (pmlz-cp)
+
+[Service]
+ExecStart=python /usr/local/lib/pmlz-cp/vmouse.py
+
+[Install]
+WantedBy=multi-user.target
