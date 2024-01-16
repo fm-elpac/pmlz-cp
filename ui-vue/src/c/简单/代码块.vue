@@ -5,7 +5,7 @@ const p = defineProps({
 </script>
 
 <template>
-  <div class="c-代码块">
+  <div class="c-代码块 text-medium-emphasis">
     <pre>{{ p.文本 }}</pre>
   </div>
 </template>
@@ -13,8 +13,9 @@ const p = defineProps({
 <style scoped>
 .c-代码块 {
   padding: 1em;
-  background-color: var(--c-边框);
   overflow-x: auto;
+
+  background-color: #DCEDC8; /* light-green-lighten-4 */
 }
 
 pre {

@@ -26,7 +26,7 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 </script>
 
 <template>
-  <div class="c-侧栏按钮" :class="{ 激活 }" @click="点击">
+  <div class="c-侧栏按钮" :class="{ 激活, 'text-medium-emphasis': !激活 }" @click="点击">
     <span>{{ p.文本 }}{{ 按键帮助文本 }}</span>
   </div>
 </template>
@@ -41,6 +41,7 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
   position: relative;
   top: 0;
   right: 0;
+  width: 100%;
 }
 
 .c-侧栏按钮::after {
@@ -55,7 +56,6 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 
 span {
   font-size: 2em;
-  color: var(--c-文字2);
 }
 
 .c-侧栏按钮:hover,
@@ -65,13 +65,12 @@ span {
 
 .c-侧栏按钮:hover span,
 .c-侧栏按钮.激活 span {
-  color: var(--c-标题);
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }
 
 .c-侧栏按钮:hover::after,
 .c-侧栏按钮.激活::after {
-  background-color: var(--c-标题);
+  background-color: rgb(var(--v-theme-primary));
   box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }
 </style>

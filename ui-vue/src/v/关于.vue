@@ -48,7 +48,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <p>版本 {{ P_VER }}</p>
       <p>项目网址: https://github.com/fm-elpac/pmlz-cp</p>
 
-      <hr />
+      <v-divider :thickness="4" />
       <p>electronjs 版本:</p>
       <c代码块 :文本="electronjs版本" />
       <h3>LICENSE</h3>
@@ -65,13 +65,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 .关于信息 h2 {
   font-size: 2.6em;
-  color: var(--c-标题);
   margin-bottom: 0.4em;
 }
 
 .关于信息 h3 {
   font-size: 2em;
-  color: var(--c-标题);
   margin: 1em 0 0.5em 0;
 }
 
@@ -80,9 +78,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   margin-bottom: 0.4em;
 }
 
-hr {
+.v-divider {
   margin: 2em 0 1em 0;
-  border: none;
-  border-bottom: solid 0.2em var(--c-边框);
 }
 </style>

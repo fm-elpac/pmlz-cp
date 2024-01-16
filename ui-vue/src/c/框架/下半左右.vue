@@ -24,7 +24,6 @@ useKbScroll(e);
 <style scoped>
 .c-下半左右 {
   height: 100%;
-  overflow-y: auto;
 
   display: flex;
 }
@@ -41,5 +40,6 @@ useKbScroll(e);
 
 .左 {
   width: 14em;
+  overflow-x: visible;
 }
 </style>

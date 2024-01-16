@@ -1,0 +1,23 @@
+/* 全局样式  */
+
+body {
+  min-height: 1900px; /* 1080x1920 */
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(var(--v-theme-background));
+  font-size: 16px;
+
+  /* TODO */
+  background-color: #F1F8E9; /* light-green-lighten-5 */
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+}

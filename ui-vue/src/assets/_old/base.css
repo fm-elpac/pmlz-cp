@@ -10,18 +10,7 @@
 
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
-
 body {
-  min-height: 1900px; /* 1080x1920 */
-  height: 100vh;
-
   background-color: var(--c-背景);
   color: var(--c-文字);
 

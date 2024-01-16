@@ -60,7 +60,7 @@ const 星期 = computed(() => 格式化星期(d.value));
 }
 
 .d1, .d2 {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .行2 {

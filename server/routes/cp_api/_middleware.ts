@@ -8,6 +8,7 @@ interface 状态 {
 }
 
 // /cp_api/* header: x-token
+// 检查口令 (认证)
 export async function handler(
   req: Request,
   ctx: FreshContext<状态>,

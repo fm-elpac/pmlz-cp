@@ -3,7 +3,7 @@ import c导航栏按钮 from "./导航栏按钮.vue";
 </script>
 
 <template>
-  <div class="c-导航栏">
+  <div class="c-导航栏 elevation-4">
     <div class="行">
       <c导航栏按钮 文本="首页" 路径="/" 按键="F2" />
       <c导航栏按钮 文本="功能" 路径="/功能" 按键="F3" />
@@ -15,9 +15,12 @@ import c导航栏按钮 from "./导航栏按钮.vue";
 
 <style scoped>
 .c-导航栏 {
-  border-bottom: solid 0.2em var(--c-边框);
+  background-color: #CCFF90; /* light-green-accent-1 */
 
-  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .行 {

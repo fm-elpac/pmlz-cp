@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="c-侧栏">
+  <div class="c-侧栏 elevation-2">
     <div class="列">
       <slot />
     </div>
@@ -11,7 +11,9 @@
 
 <style scoped>
 .c-侧栏 {
-  border-right: solid 0.2em var(--c-边框);
   min-height: 100%;
+  margin-right: 0.2em;
+
+  background-color: #DCEDC8; /* light-green-lighten-4 */
 }
 </style>
