@@ -21,6 +21,8 @@ export const ENV_HOME: string = "HOME";
 export const FP_TOKEN: string = "/pmlz-cp/token";
 // 用户数据库位置: ~/.config/pmlz-cp/pmlz-cp-user.db
 export const FP_USER_DB: string = "/.config/pmlz-cp/pmlz-cp-user.db";
+// 运行端口存储位置: ${XDG_RUNTIME_DIR}/pmlz-cp/port
+export const FP_PORT: string = "/pmlz-cp/port";
 
 // 口令 http 头的名称
 export const HH_TOKEN: string = "x-token";

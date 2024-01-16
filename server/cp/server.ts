@@ -1,9 +1,13 @@
 // pmlz-cp deno server
+import { join } from "$std/path/join.ts";
+
 import {
   ENV_PMLZ_CP,
   ENV_PMLZ_CP_PORT,
   ENV_PMLZ_CP_TOKEN,
   ENV_PMLZ_CP_UI_CMD,
+  ENV_XDG_RUNTIME_DIR,
+  FP_PORT,
   默认端口,
 } from "./conf.ts";
 import { logi } from "./log.ts";
@@ -23,10 +27,18 @@ export function 获取端口(): number {
   return 默认端口;
 }
 
+export function 端口文件路径(): string {
+  const 目录 = Deno.env.get(ENV_XDG_RUNTIME_DIR);
+  return join(目录, FP_PORT);
+}
+
 // http 服务器开始监听后的回调
-export function onListen(p: { hostname: string; port: number }) {
+export async function onListen(p: { hostname: string; port: number }) {
   logi("/fresh: listen");
   console.log(p);
+
+  // 保存端口号至运行文件
+  await Deno.writeTextFile(端口文件路径(), p.port);
 
   // 启动图形界面
   if (Deno.env.get(ENV_PMLZ_CP) == "1") {

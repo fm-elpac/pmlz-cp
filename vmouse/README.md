@@ -59,4 +59,16 @@ sudo python vmouse.py
 
   <https://www.kernel.org/doc/html/latest/input/uinput.html>
 
+## 版本信息
+
+```
+> uname -a
+Linux ARCH-2 6.6.10-zen1-1-zen #1 ZEN SMP PREEMPT_DYNAMIC Fri, 05 Jan 2024 16:20:18 +0000 x86_64 GNU/Linux
+> python --version
+Python 3.11.6
+> pacman -Ss python-evdev
+extra/python-evdev 1.6.1-2 [已安装]
+    Python bindings for the Linux input subsystem
+```
+
 TODO
