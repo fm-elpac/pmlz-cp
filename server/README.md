@@ -12,4 +12,13 @@
 deno task start
 ```
 
+## 版本信息
+
+```
+> deno --version
+deno 1.39.4 (release, x86_64-unknown-linux-gnu)
+v8 12.0.267.8
+typescript 5.3.3
+```
+
 TODO

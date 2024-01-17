@@ -7,6 +7,7 @@ import c侧栏按钮 from "@/c/侧栏/侧栏按钮.vue";
   <c下半左右 class="v-调试">
     <c侧栏按钮 文本="系统信息" 路径="/debug/sys" 按键="s" />
     <c侧栏按钮 文本="GPU" 路径="/debug/gpu" 按键="g" />
+    <c侧栏按钮 文本="触摸屏" 路径="/debug/touch" 按键="t" />
   </c下半左右>
 </template>
 

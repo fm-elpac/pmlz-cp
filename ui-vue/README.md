@@ -24,4 +24,14 @@
 
   键盘按键操作的帮助信息
 
+## 主要依赖
+
+- <https://vuejs.org/>
+
+- <https://router.vuejs.org/>
+
+- <https://vitejs.dev/>
+
+- <https://vuetifyjs.com/>
+
 TODO

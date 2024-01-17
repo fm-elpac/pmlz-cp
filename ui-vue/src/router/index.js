@@ -6,6 +6,7 @@ import 关于 from "../v/关于.vue";
 import 调试 from "../v/debug/调试.vue";
 import DebugSys from "../v/debug/sys.vue";
 import DebugGpu from "../v/debug/gpu.vue";
+import DebugTouch from "../v/debug/touch.vue";
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -37,6 +38,10 @@ const router = createRouter({
         {
           path: "gpu",
           component: DebugGpu,
+        },
+        {
+          path: "touch",
+          component: DebugTouch,
         },
       ],
     },
