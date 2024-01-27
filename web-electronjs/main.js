@@ -138,6 +138,24 @@ function 初始化隐藏鼠标指针(w) {
   });
 }
 
+function 初始化滚动条(w) {
+  // 设置 <body> 滚动条样式
+  const CSS = `
+  body::-webkit-scrollbar {
+    width: 2px;
+    background-color: #000;
+  }
+
+  body::-webkit-scrollbar-button {
+    display: none;
+  }
+  `;
+
+  w.webContents.on("dom-ready", async () => {
+    await w.webContents.insertCSS(CSS);
+  });
+}
+
 function 创建窗口() {
   const w = new BrowserWindow({
     width: 1080,
@@ -150,10 +168,14 @@ function 创建窗口() {
 
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
+
+      // 默认页面缩放
+      zoomFactor: 1.4,
     },
   });
 
   初始化隐藏鼠标指针(w);
+  初始化滚动条(w);
 
   const url = 获取加载地址();
 

@@ -12,13 +12,13 @@ const p = defineProps({
 
 <style scoped>
 .c-代码块 {
-  padding: 1em;
+  padding: 0.8em;
   overflow-x: auto;
 
   background-color: #DCEDC8; /* light-green-lighten-4 */
 }
 
 pre {
-  font-size: 1.6em;
+  font-size: 1.2em;
 }
 </style>

@@ -2,7 +2,7 @@
 Description=pmlz-cp web ui (electronjs, cage, deno/fresh)
 
 [Service]
-ExecStart=deno run -A --unstable ${HOME}/pmlz-cp/server/main.ts
+ExecStart=deno run --allow-run --allow-read --allow-write --allow-net --allow-env --allow-sys --unstable-kv ${HOME}/pmlz-cp/server/main.ts
 
 # 实际运行模式 (否则为开发模式)
 Environment=PMLZ_CP=1

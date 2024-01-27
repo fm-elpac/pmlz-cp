@@ -21,6 +21,6 @@ useInterval(() => {
 
 <style scoped>
 .c-顶栏时间 {
-  font-size: 1.6em;
+  font-size: 1.2em;
 }
 </style>

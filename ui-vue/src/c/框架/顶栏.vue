@@ -21,11 +21,11 @@ function 切换明暗() {
   display: flex;
   align-items: center;
 
-  padding: 1em;
+  padding: 0.8em;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.6em;
   flex-grow: 1;
   flex-shrink: 1;
   font-weight: normal;

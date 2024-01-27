@@ -30,6 +30,6 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 
 <style scoped>
 .c-块按钮 {
-  margin: 1em;
+  margin: 0.8em;
 }
 </style>

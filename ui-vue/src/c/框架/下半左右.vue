@@ -36,10 +36,13 @@ useKbScroll(e);
 .右 {
   flex-grow: 1;
   flex-shrink: 1;
+  width: 0;
 }
 
 .左 {
-  width: 14em;
+  width: 12em;
   overflow-x: visible;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 </style>

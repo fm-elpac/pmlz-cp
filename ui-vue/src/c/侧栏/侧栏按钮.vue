@@ -33,7 +33,8 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 
 <style scoped>
 .c-侧栏按钮 {
-  padding: 1em 2em 1em 1em;
+  padding: 0.8em;
+  padding-right: 1.6em;
   text-align: right;
 
   cursor: pointer;
@@ -55,7 +56,7 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 }
 
 span {
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .c-侧栏按钮:hover,

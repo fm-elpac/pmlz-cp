@@ -30,11 +30,11 @@ onMounted(async () => {
 
 <style scoped>
 .v-debug-gpu {
-  padding: 1em;
+  padding: 0.8em;
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.2em;
   margin: 1em 0 0.4em 0;
 }
 

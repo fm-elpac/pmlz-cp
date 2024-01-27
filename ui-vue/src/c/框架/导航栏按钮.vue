@@ -33,7 +33,7 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 
 <style scoped>
 .c-导航栏按钮 {
-  padding: 1em 3em;
+  padding: 0.8em 2em;
 
   cursor: pointer;
 
@@ -53,7 +53,7 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 }
 
 span {
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .c-导航栏按钮:hover,

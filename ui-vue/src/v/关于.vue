@@ -54,7 +54,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <h3>LICENSE</h3>
       <c代码块 :文本="license" />
     </div>
-    <c块按钮 文本="进入调试界面" 按键="d" @点击="调试" />
+    <c块按钮 class="调试" 文本="进入调试界面" 按键="d" @点击="调试" />
   </c下半简单>
 </template>
 
@@ -64,21 +64,25 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 }
 
 .关于信息 h2 {
-  font-size: 2.6em;
+  font-size: 2em;
   margin-bottom: 0.4em;
 }
 
 .关于信息 h3 {
-  font-size: 2em;
+  font-size: 1.6em;
   margin: 1em 0 0.5em 0;
 }
 
 .关于信息 p {
-  font-size: 1.6em;
+  font-size: 1.2em;
   margin-bottom: 0.4em;
 }
 
 .v-divider {
   margin: 2em 0 1em 0;
+}
+
+.调试 {
+  margin: 0;
 }
 </style>

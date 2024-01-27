@@ -14,7 +14,7 @@ useKbScroll(e);
 
 <style scoped>
 .c-下半简单 {
-  padding: 1em;
+  padding: 0.8em;
   height: 100%;
   overflow-y: auto;
 }

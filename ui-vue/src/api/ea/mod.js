@@ -3,6 +3,11 @@
 // preload.js
 const ea = window.pmlz_cp_ea;
 
+// 检查是否在 electronjs 环境中运行
+export function ea可用() {
+  return null != window.pmlz_cp_ea;
+}
+
 // 获取 electronjs 版本信息
 export async function electron版本() {
   return await ea.electron_version();

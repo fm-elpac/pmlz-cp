@@ -1,7 +1,7 @@
 /* 全局样式  */
 
 body {
-  min-height: 1900px; /* 1080x1920 */
+  min-height: 1357px; /* 1080x1920 缩放 1.4 */
   height: 100vh;
 
   display: flex;
@@ -20,4 +20,19 @@ body {
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
+}
+
+/* 隐藏滚动条箭头 */
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar:horizontal {
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.6);
+}
+::-webkit-scrollbar-button {
+  display: none;
 }
