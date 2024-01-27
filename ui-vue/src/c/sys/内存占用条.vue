@@ -13,7 +13,7 @@ const 内存占用 = computed(function () {
   <v-progress-linear
     class="c-内存占用条"
     :modelValue="内存占用"
-    color="deep-orange"
+    color="primary"
     height="24"
     striped
   />

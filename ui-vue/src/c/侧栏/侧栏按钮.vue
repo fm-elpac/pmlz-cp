@@ -49,10 +49,10 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
   content: "";
   display: block;
   height: 100%;
-  width: 0.2em;
+  width: 0.1em;
   position: absolute;
   top: 0;
-  right: -0.2em;
+  right: -0.1em;
 }
 
 span {
@@ -61,7 +61,7 @@ span {
 
 .c-侧栏按钮:hover,
 .c-侧栏按钮.激活 {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(var(--v-theme-primary-darken-1));
 }
 
 .c-侧栏按钮:hover span,
@@ -71,7 +71,6 @@ span {
 
 .c-侧栏按钮:hover::after,
 .c-侧栏按钮.激活::after {
-  background-color: rgb(var(--v-theme-primary));
-  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  background-color: rgba(var(--v-border-color), 0.6);
 }
 </style>

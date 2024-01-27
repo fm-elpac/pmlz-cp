@@ -15,7 +15,7 @@ const p = defineProps({
   padding: 0.8em;
   overflow-x: auto;
 
-  background-color: #DCEDC8; /* light-green-lighten-4 */
+  background-color: rgba(var(--v-theme-primary), 0.2);
 }
 
 pre {

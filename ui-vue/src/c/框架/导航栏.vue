@@ -15,7 +15,7 @@ import c导航栏按钮 from "./导航栏按钮.vue";
 
 <style scoped>
 .c-导航栏 {
-  background-color: #CCFF90; /* light-green-accent-1 */
+  background-color: rgb(var(--v-theme-primary));
 
   position: relative;
   top: 0;

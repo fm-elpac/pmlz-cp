@@ -14,6 +14,6 @@
   min-height: 100%;
   margin-right: 0.2em;
 
-  background-color: #DCEDC8; /* light-green-lighten-4 */
+  background-color: rgba(var(--v-theme-secondary), 0.8);
 }
 </style>

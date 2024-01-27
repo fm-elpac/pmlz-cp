@@ -33,7 +33,7 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 
 <style scoped>
 .c-导航栏按钮 {
-  padding: 0.8em 2em;
+  padding: 0.8em 1.8em;
 
   cursor: pointer;
 
@@ -58,7 +58,7 @@ span {
 
 .c-导航栏按钮:hover,
 .c-导航栏按钮.激活 {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(var(--v-theme-primary-darken-1));
 }
 
 .c-导航栏按钮:hover span,
@@ -68,7 +68,6 @@ span {
 
 .c-导航栏按钮:hover::after,
 .c-导航栏按钮.激活::after {
-  background-color: rgb(var(--v-theme-primary));
-  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  background-color: rgba(var(--v-border-color), 0.6);
 }
 </style>

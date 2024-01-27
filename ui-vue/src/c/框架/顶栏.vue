@@ -5,7 +5,8 @@ import c顶栏时间 from "./顶栏时间.vue";
 const 主题 = useTheme();
 
 function 切换明暗() {
-  主题.global.name.value = 主题.global.current.value.dark ? "light" : "dark";
+  //主题.global.name.value = 主题.global.current.value.dark ? "light" : "dark";
+  主题.global.name.value = 主题.global.current.value.dark ? "主题暖橙" : "dark";
 }
 </script>
 
