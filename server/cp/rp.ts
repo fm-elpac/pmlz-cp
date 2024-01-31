@@ -1,7 +1,7 @@
 // 执行命令 (创建新进程)
 
 // 执行输入的命令, 返回退出码
-export async function 执行命令(命令): Promise<number> {
+export async function 执行命令(命令: string): Promise<number> {
   const c = new Deno.Command("/bin/sh", {
     args: ["-c", 命令],
   });
@@ -15,7 +15,7 @@ function 解码(数据: Uint8Array): string {
 }
 
 // 执行输入的命令, 获取其输出
-export async function 执行命令输出(命令): Promise<{
+export async function 执行命令输出(命令: string): Promise<{
   code: number;
   stdout: string;
   stderr: string;

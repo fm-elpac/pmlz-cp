@@ -13,7 +13,7 @@ export async function 建上级目录(p: string) {
 }
 
 // 返回 json 响应
-export function res_json(数据) {
+export function res_json(数据: unknown) {
   return new Response(JSON.stringify(数据), {
     headers: {
       "Content-Type": "application/json",

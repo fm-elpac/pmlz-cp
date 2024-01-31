@@ -5,6 +5,7 @@ import { 检查口令 } from "../../cp/token.ts";
 
 interface 状态 {
   // TODO
+  _todo?: number;
 }
 
 // /cp_api/* header: x-token

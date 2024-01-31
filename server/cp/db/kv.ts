@@ -7,12 +7,14 @@ import { logi } from "../log.ts";
 import { 建上级目录 } from "../util.ts";
 
 // 打开的数据库实例
-const etc = {
-  kv: null,
+const etc: {
+  kv?: Deno.Kv;
+} = {
+  kv: undefined,
 };
 
 export async function 初始化数据库() {
-  const 数据库文件 = join(Deno.env.get(ENV_HOME), FP_USER_DB);
+  const 数据库文件 = join(Deno.env.get(ENV_HOME)!, FP_USER_DB);
   logi(" db: " + 数据库文件);
 
   await 建上级目录(数据库文件);
@@ -22,5 +24,5 @@ export async function 初始化数据库() {
 }
 
 export function kv() {
-  return etc.kv;
+  return etc.kv!;
 }

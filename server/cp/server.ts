@@ -28,7 +28,7 @@ export function 获取端口(): number {
 }
 
 export function 端口文件路径(): string {
-  const 目录 = Deno.env.get(ENV_XDG_RUNTIME_DIR);
+  const 目录 = Deno.env.get(ENV_XDG_RUNTIME_DIR)!;
   return join(目录, FP_PORT);
 }
 
@@ -38,11 +38,11 @@ export async function onListen(p: { hostname: string; port: number }) {
   console.log(p);
 
   // 保存端口号至运行文件
-  await Deno.writeTextFile(端口文件路径(), p.port);
+  await Deno.writeTextFile(端口文件路径(), p.port.toString());
 
   // 启动图形界面
   if (Deno.env.get(ENV_PMLZ_CP) == "1") {
-    const ui_cmd = Deno.env.get(ENV_PMLZ_CP_UI_CMD);
+    const ui_cmd = Deno.env.get(ENV_PMLZ_CP_UI_CMD)!;
     logi(" run: " + ui_cmd);
 
     const c = new Deno.Command("/bin/sh", {

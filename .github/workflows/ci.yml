@@ -17,6 +17,7 @@ jobs:
     - run: deno fmt --check
 
     # server/
+    - run: cd server && deno task check
     - run: cd server && deno task build
 
     # ui-vue/

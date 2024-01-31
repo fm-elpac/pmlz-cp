@@ -25,7 +25,7 @@ async function 获取随机数据(): Promise<string> {
 }
 
 export function 口令文件路径(): string {
-  const 目录 = Deno.env.get(ENV_XDG_RUNTIME_DIR);
+  const 目录 = Deno.env.get(ENV_XDG_RUNTIME_DIR)!;
   return join(目录, FP_TOKEN);
 }
 
