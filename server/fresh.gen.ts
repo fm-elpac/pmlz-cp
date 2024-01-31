@@ -7,6 +7,9 @@ import * as $_app from "./routes/_app.tsx";
 import * as $cp_api_middleware from "./routes/cp_api/_middleware.ts";
 import * as $cp_api_conf_get from "./routes/cp_api/conf_get.ts";
 import * as $cp_api_conf_set from "./routes/cp_api/conf_set.ts";
+import * as $cp_api_sys_getvcp from "./routes/cp_api/sys/getvcp.ts";
+import * as $cp_api_sys_move_mouse from "./routes/cp_api/sys/move_mouse.ts";
+import * as $cp_api_sys_setvcp from "./routes/cp_api/sys/setvcp.ts";
 import * as $cp_api_sys_sync from "./routes/cp_api/sys/sync.ts";
 import * as $cp_api_version from "./routes/cp_api/version.ts";
 import * as $index from "./routes/index.ts";
@@ -22,6 +25,9 @@ const manifest = {
     "./routes/cp_api/_middleware.ts": $cp_api_middleware,
     "./routes/cp_api/conf_get.ts": $cp_api_conf_get,
     "./routes/cp_api/conf_set.ts": $cp_api_conf_set,
+    "./routes/cp_api/sys/getvcp.ts": $cp_api_sys_getvcp,
+    "./routes/cp_api/sys/move_mouse.ts": $cp_api_sys_move_mouse,
+    "./routes/cp_api/sys/setvcp.ts": $cp_api_sys_setvcp,
     "./routes/cp_api/sys/sync.ts": $cp_api_sys_sync,
     "./routes/cp_api/version.ts": $cp_api_version,
     "./routes/index.ts": $index,
