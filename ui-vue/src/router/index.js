@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import 首页 from "../v/首页.vue";
 import 功能 from "../v/功能.vue";
-import 设置 from "../v/设置.vue";
+import 设置 from "../v/s/设置.vue";
+import 设置显示器 from "../v/s/显示器.vue";
 import 关于 from "../v/关于.vue";
 import 调试 from "../v/debug/调试.vue";
 import DebugSys from "../v/debug/sys.vue";
@@ -22,6 +23,12 @@ const router = createRouter({
     {
       path: "/设置",
       component: 设置,
+      children: [
+        {
+          path: "显示器",
+          component: 设置显示器,
+        },
+      ],
     },
     {
       path: "/about",

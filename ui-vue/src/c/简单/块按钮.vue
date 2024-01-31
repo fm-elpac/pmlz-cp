@@ -19,7 +19,8 @@ const { 按键帮助文本 } = useKb(p.按键, 点击);
 <template>
   <div class="c-块按钮">
     <v-btn block size="x-large" :disabled="p.运行" @click="点击">
-      <span>{{ p.文本 }}{{ 按键帮助文本 }}</span>
+      <span>{{ p.文本 }}</span>
+      <span class="kb">{{ 按键帮助文本 }}</span>
 
       <template #append v-if="p.运行">
         <v-progress-circular indeterminate color="primary" />

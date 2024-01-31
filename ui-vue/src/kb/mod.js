@@ -125,3 +125,9 @@ export function useKbScroll(ref) {
     });
   });
 }
+
+// hook
+// 返回: 是否显示按键帮助信息
+export function useKb帮助() {
+  return etc.帮助;
+}
