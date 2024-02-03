@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import { cp_sys_getvcp, cp_sys_setvcp } from "@/api/da/sys.js";
+import { getvcp, setvcp } from "@/util/vcp.js";
 import c设置滑条 from "./设置滑条.vue";
 
 const p = defineProps({
@@ -11,6 +11,8 @@ const p = defineProps({
   按键加: String,
 });
 
+const emit = defineEmits(["更新"]);
+
 const 最大 = ref(1);
 const 步长 = ref(1);
 
@@ -20,7 +22,7 @@ const 已加载 = ref(false);
 const 名称 = computed(() => `${p.名称} (${值.value})`);
 
 async function 加载vcp() {
-  const { v, M } = await cp_sys_getvcp(p.vcp);
+  const { v, M } = await getvcp(p.vcp);
 
   最大.value = M;
   值.value = v;
@@ -34,8 +36,10 @@ async function 设(v) {
   }
   已加载.value = false;
 
-  await cp_sys_setvcp(p.vcp, v);
+  await setvcp(p.vcp, v);
   await 加载vcp();
+
+  emit("更新");
 }
 
 onMounted(加载vcp);

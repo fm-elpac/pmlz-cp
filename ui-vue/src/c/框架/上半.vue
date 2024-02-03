@@ -2,15 +2,13 @@
 import c顶栏 from "./顶栏.vue";
 import c导航栏 from "./导航栏.vue";
 
-import c大时钟 from "../上半/大时钟.vue";
+import c主 from "../上半/主.vue";
 </script>
 
 <template>
   <div class="c-上半">
     <c顶栏 />
-    <div class="中心区域">
-      <c大时钟 />
-    </div>
+    <c主 class="中心区域" />
     <c导航栏 />
   </div>
 </template>

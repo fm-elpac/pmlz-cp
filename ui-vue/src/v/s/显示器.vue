@@ -1,5 +1,10 @@
 <script setup>
+import { 播放启动声音 } from "@/util/声音.js";
 import c设置vcp from "@/c/设置/设置vcp.vue";
+
+function 更新声音() {
+  播放启动声音();
+}
 </script>
 
 <template>
@@ -24,6 +29,7 @@ import c设置vcp from "@/c/设置/设置vcp.vue";
       vcp="62"
       按键减="5"
       按键加="6"
+      @更新="更新声音"
     />
   </div>
 </template>

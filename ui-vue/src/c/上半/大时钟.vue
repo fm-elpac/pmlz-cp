@@ -29,7 +29,7 @@ const 星期 = computed(() => 格式化星期(d.value));
 
 <style scoped>
 .c-大时钟 {
-  padding: 4em 0;
+  padding: 2em 1em;
 }
 
 .行1 {

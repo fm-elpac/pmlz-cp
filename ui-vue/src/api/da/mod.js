@@ -17,8 +17,6 @@ export async function cp_conf_set(数据) {
   return await da_post("conf_set", 数据);
 }
 
-// TODO
-
 // DEBUG
 window.cp_version = cp_version;
 window.cp_conf_get = cp_conf_get;

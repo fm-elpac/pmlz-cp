@@ -1,5 +1,5 @@
 import { inject, provide, ref } from "vue";
-import { useInterval } from "@/hook/定时器.js";
+import { useInterval } from "./定时器.js";
 import { os_loadavg, os_memory, os_uptime } from "@/api/ea/mod.js";
 
 // provide/inject
