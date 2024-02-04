@@ -14,14 +14,14 @@ const 星期 = computed(() => 格式化星期(d.value));
 
 <template>
   <div class="c-大时钟">
-    <div class="行1">
+    <div class="时间">
       <span class="时">{{ t[0] }}</span>
       <span class="d1">:</span>
       <span class="分">{{ t[1] }}</span>
       <span class="d2">:</span>
       <span class="秒">{{ t[2] }}</span>
     </div>
-    <div class="行2">
+    <div class="星期0">
       <span class="星期">星期{{ 星期 }}</span>
     </div>
   </div>
@@ -29,10 +29,14 @@ const 星期 = computed(() => 格式化星期(d.value));
 
 <style scoped>
 .c-大时钟 {
-  padding: 2em 1em;
+  padding: 1em;
+  padding-top: 2em;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.行1 {
+.时间 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -40,7 +44,7 @@ const 星期 = computed(() => 格式化星期(d.value));
 }
 
 .时, .分, .d1 {
-  font-size: 8em;
+  font-size: 7em;
   line-height: 1em;
   letter-spacing: 4px;
 }
@@ -50,7 +54,7 @@ const 星期 = computed(() => 格式化星期(d.value));
 }
 
 .秒, .d2 {
-  font-size: 6em;
+  font-size: 5.2em;
   line-height: 1em;
   letter-spacing: 6px;
 }
@@ -69,7 +73,7 @@ const 星期 = computed(() => 格式化星期(d.value));
 }
 
 .星期 {
-  font-size: 4em;
+  font-size: 3.4em;
   opacity: 0.8;
 }
 </style>

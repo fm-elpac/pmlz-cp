@@ -6,7 +6,7 @@ const 系统信息 = useSysInfo();
 
 const 平均负载 = computed(function () {
   // 格式化平均负载
-  return 系统信息.loadavg.value.join(", ");
+  return 系统信息.loadavg.value.map((x) => x.toFixed(2)).join(", ");
 });
 </script>
 

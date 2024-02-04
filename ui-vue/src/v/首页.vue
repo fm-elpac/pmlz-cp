@@ -3,6 +3,7 @@ import c运行时长 from "@/c/sys/运行时长.vue";
 import c内存占用 from "@/c/sys/内存占用.vue";
 import c平均负载 from "@/c/sys/平均负载.vue";
 import c内存占用条 from "@/c/sys/内存占用条.vue";
+import c屏幕亮度 from "@/c/sys/屏幕亮度.vue";
 </script>
 
 <template>
@@ -10,6 +11,9 @@ import c内存占用条 from "@/c/sys/内存占用条.vue";
     <div class="todo">(首页)</div>
 
     <div class="系统信息">
+      <p>
+        <c屏幕亮度 class="s" />
+      </p>
       <p>
         <c内存占用 class="s" />
         <c平均负载 class="s" />

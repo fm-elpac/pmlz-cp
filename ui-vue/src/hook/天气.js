@@ -1,7 +1,7 @@
 import { computed, onMounted, ref } from "vue";
 import { useInterval } from "./定时器.js";
 import { cp_conf_get } from "@/api/da/mod.js";
-import { qw实时天气, qw设置配置 } from "@/api/天气/qweather.js";
+import { qw实时天气, qw小时预报, qw设置配置 } from "@/api/天气/qweather.js";
 
 // 获取天气数据, 自动刷新
 export function useWeather() {
@@ -25,11 +25,24 @@ export function useWeather() {
     switch (天气配置.value.api) {
       case "qweather":
         {
-          天气数据.value = await qw实时天气();
+          const 实时 = await qw实时天气();
+          const 结果 = Object.assign({}, 天气数据.value, { 实时 });
+          // 首次加载 小时预报
+          if (null == 结果.小时预报) {
+            结果.小时预报 = await qw小时预报();
+          }
+          天气数据.value = 结果;
         }
         break;
       default:
         throw new Error("配置错误 (api)");
+    }
+  }
+
+  async function 加载小时预报() {
+    if ("qweather" == 天气配置.value.api) {
+      const 小时预报 = await qw小时预报();
+      天气数据.value = Object.assign({}, 天气数据.value, { 小时预报 });
     }
   }
 
@@ -91,13 +104,20 @@ export function useWeather() {
 
   // 只有超过配置值, 才进行更新
   let 更新计数 = 0;
+  // 每 30 分钟更新一次小时预报
+  let 更新计数_小时预报 = 0;
 
   async function 检查更新() {
     更新计数 += 1;
+    更新计数_小时预报 += 1;
     if (更新计数 > 天气配置.value.update_m) {
       更新计数 = 0;
 
       await 加载数据();
+    }
+    if (更新计数_小时预报 > 30) {
+      更新计数_小时预报 = 0;
+      await 加载小时预报();
     }
   }
   // 每分钟检查一次
