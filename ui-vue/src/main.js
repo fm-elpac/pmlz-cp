@@ -1,4 +1,5 @@
 import "./assets/body.css";
+import "qweather-icons/font/qweather-icons.css";
 
 import { createApp } from "vue";
 import App from "./App.vue";
